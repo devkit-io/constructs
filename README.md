@@ -1,5 +1,8 @@
 # `devkit-io/constructs`
 
+![Build Status](https://github.com/devkit-io/constructs/actions/workflows/build.yml/badge.svg)
+
+
 A library of AWS Cloud Development Kit (CDK) constructs designed to simplify AWS cloud resources deployment.
 
 ![CDK Logo](https://aws1.discourse-cdn.com/aws1/original/3X/2/2/22a183b989d8b36e7f8a17f735020a041f3d7be3.png) *(Image Source: AWS CDK GitHub Repo)*
