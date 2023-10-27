@@ -1,8 +1,8 @@
 {
-  "name": "devkit-constructs",
+  "name": "@devkit-io/constructs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colemurray.cs/devkit-constructs.git"
+    "url": "https://github.com/devkit-io/constructs.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -29,16 +29,17 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "user",
+    "name": "ColeMurray",
     "email": "colemurray.cs@gmail.com",
     "organization": false
   },
   "devDependencies": {
+    "@aws-cdk/aws-amplify-alpha": "2.103.1-alpha.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.103.1",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.9",
@@ -59,7 +60,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "@aws-cdk/aws-amplify-alpha": "^2.103.1-alpha.0",
+    "aws-cdk-lib": "^2.103.1",
     "constructs": "^10.0.5"
   },
   "keywords": [
