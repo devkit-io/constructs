@@ -551,6 +551,7 @@ const docusaurusSiteProps: DocusaurusSiteProps = { ... }
 | <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.certificateArn">certificateArn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.domainNames">domainNames</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.image">image</a></code> | <code>aws-cdk-lib.DockerImage</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.sourcePath">sourcePath</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -582,6 +583,16 @@ public readonly domainNames: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+##### `image`<sup>Optional</sup> <a name="image" id="@devkit-io/constructs.DocusaurusSiteProps.property.image"></a>
+
+```typescript
+public readonly image: DockerImage;
+```
+
+- *Type:* aws-cdk-lib.DockerImage
 
 ---
 
