@@ -1,3 +1,4 @@
+export * from './circuit-breaker-container-service';
 export * from './docusaurus-site';
 export * from './monitored-node-lambda';
 export * from './nextjs-amplify-site';
