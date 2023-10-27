@@ -1,14 +1,13 @@
-import {Stack} from 'aws-cdk-lib';
-import {DockerImageAsset} from 'aws-cdk-lib/aws-ecr-assets';
-import {ICluster} from 'aws-cdk-lib/aws-ecs';
-import {CircuitBreakerContainerService, ContainerServiceProps} from '../../src';
-import {Match, Template} from 'aws-cdk-lib/assertions';
-
+import { Stack } from 'aws-cdk-lib';
+import { Match, Template } from 'aws-cdk-lib/assertions';
+import { DockerImageAsset } from 'aws-cdk-lib/aws-ecr-assets';
+import { ICluster } from 'aws-cdk-lib/aws-ecs';
+import { CircuitBreakerContainerService, CircuitBreakerContainerServiceProps } from '../../src';
 
 
 describe('CircuitBreakerContainerService', () => {
   let stack: Stack;
-  let props: ContainerServiceProps;
+  let props: CircuitBreakerContainerServiceProps;
 
   const mockDockerImageAsset = {
     imageUri: 'testImageUri',
@@ -25,7 +24,7 @@ describe('CircuitBreakerContainerService', () => {
     hasEc2Capacity: jest.fn().mockReturnValue(true),
     bind: jest.fn().mockReturnValue({
 
-    })
+    }),
   } as unknown as ICluster;
 
   beforeEach(() => {
@@ -66,7 +65,8 @@ describe('CircuitBreakerContainerService', () => {
       LoadBalancers: Match.arrayWith([
         Match.objectLike({
           TargetGroupArn: props.targetGroupArns[0],
-        })])
+        }),
+      ]),
     });
   });
 
@@ -90,9 +90,9 @@ describe('CircuitBreakerContainerService', () => {
           volumeType: 'gp2',
           mountPoint: '/data',
           deleteOnTermination: true,
-          readOnly: false
-        }
-      }
+          readOnly: false,
+        },
+      },
     };
 
     new CircuitBreakerContainerService(stack, 'TestContainerService', props);
@@ -100,8 +100,8 @@ describe('CircuitBreakerContainerService', () => {
     const assert = Template.fromStack(stack);
     assert.hasResourceProperties('AWS::ECS::TaskDefinition', {
       Volumes: Match.arrayWith([Match.objectLike({
-        Name: props.serviceConfiguration.ebsVolumeConfiguration?.volumeName
-      })])
+        Name: props.serviceConfiguration.ebsVolumeConfiguration?.volumeName,
+      })]),
     });
   });
 
@@ -111,8 +111,8 @@ describe('CircuitBreakerContainerService', () => {
       monitoringOptions: {
         errorPattern: 'CRITICAL',
         threshold: 5,
-        evaluationPeriods: 3
-      }
+        evaluationPeriods: 3,
+      },
     };
 
     new CircuitBreakerContainerService(stack, 'TestContainerService', props);
@@ -123,7 +123,7 @@ describe('CircuitBreakerContainerService', () => {
     });
     assert.hasResourceProperties('AWS::CloudWatch::Alarm', {
       Threshold: props.monitoringOptions.threshold,
-      EvaluationPeriods: props.monitoringOptions.evaluationPeriods
+      EvaluationPeriods: props.monitoringOptions.evaluationPeriods,
     });
   });
 
@@ -133,9 +133,9 @@ describe('CircuitBreakerContainerService', () => {
       monitoringOptions: {
         paging: {
           pagingEnabled: true,
-          pageEmailAddresses: ['test@example.com']
-        }
-      }
+          pageEmailAddresses: ['test@example.com'],
+        },
+      },
     };
 
     new CircuitBreakerContainerService(stack, 'TestContainerService', props);
@@ -143,7 +143,7 @@ describe('CircuitBreakerContainerService', () => {
     const assert = Template.fromStack(stack);
     assert.hasResourceProperties('AWS::SNS::Subscription', {
       Protocol: 'email',
-      Endpoint: props.monitoringOptions.paging?.pageEmailAddresses[0]
+      Endpoint: props.monitoringOptions.paging?.pageEmailAddresses[0],
     });
   });
 });

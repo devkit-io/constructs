@@ -17,14 +17,14 @@ Features include:
 ```typescript
 import { CircuitBreakerContainerService } from '@devkit-io/constructs'
 
-new CircuitBreakerContainerService(scope: Construct, id: string, props: ContainerServiceProps)
+new CircuitBreakerContainerService(scope: Construct, id: string, props: CircuitBreakerContainerServiceProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.ContainerServiceProps">ContainerServiceProps</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps">CircuitBreakerContainerServiceProps</a></code> | *No description.* |
 
 ---
 
@@ -42,7 +42,7 @@ new CircuitBreakerContainerService(scope: Construct, id: string, props: Containe
 
 ##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@devkit-io/constructs.ContainerServiceProps">ContainerServiceProps</a>
+- *Type:* <a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps">CircuitBreakerContainerServiceProps</a>
 
 ---
 
@@ -762,30 +762,30 @@ The tree node.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### ContainerServiceProps <a name="ContainerServiceProps" id="@devkit-io/constructs.ContainerServiceProps"></a>
+### CircuitBreakerContainerServiceProps <a name="CircuitBreakerContainerServiceProps" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps"></a>
 
-#### Initializer <a name="Initializer" id="@devkit-io/constructs.ContainerServiceProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.Initializer"></a>
 
 ```typescript
-import { ContainerServiceProps } from '@devkit-io/constructs'
+import { CircuitBreakerContainerServiceProps } from '@devkit-io/constructs'
 
-const containerServiceProps: ContainerServiceProps = { ... }
+const circuitBreakerContainerServiceProps: CircuitBreakerContainerServiceProps = { ... }
 ```
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.cluster">cluster</a></code> | <code>aws-cdk-lib.aws_ecs.ICluster</code> | *No description.* |
-| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.monitoringOptions">monitoringOptions</a></code> | <code><a href="#@devkit-io/constructs.MonitoringOptions">MonitoringOptions</a></code> | *No description.* |
-| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.serviceConfiguration">serviceConfiguration</a></code> | <code><a href="#@devkit-io/constructs.ServiceConfiguration">ServiceConfiguration</a></code> | *No description.* |
-| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.serviceName">serviceName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.targetGroupArns">targetGroupArns</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.cluster">cluster</a></code> | <code>aws-cdk-lib.aws_ecs.ICluster</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.monitoringOptions">monitoringOptions</a></code> | <code><a href="#@devkit-io/constructs.MonitoringOptions">MonitoringOptions</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.serviceConfiguration">serviceConfiguration</a></code> | <code><a href="#@devkit-io/constructs.ServiceConfiguration">ServiceConfiguration</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.serviceName">serviceName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.targetGroupArns">targetGroupArns</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
 
 ---
 
-##### `cluster`<sup>Required</sup> <a name="cluster" id="@devkit-io/constructs.ContainerServiceProps.property.cluster"></a>
+##### `cluster`<sup>Required</sup> <a name="cluster" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.cluster"></a>
 
 ```typescript
 public readonly cluster: ICluster;
@@ -795,7 +795,7 @@ public readonly cluster: ICluster;
 
 ---
 
-##### `monitoringOptions`<sup>Required</sup> <a name="monitoringOptions" id="@devkit-io/constructs.ContainerServiceProps.property.monitoringOptions"></a>
+##### `monitoringOptions`<sup>Required</sup> <a name="monitoringOptions" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.monitoringOptions"></a>
 
 ```typescript
 public readonly monitoringOptions: MonitoringOptions;
@@ -805,7 +805,7 @@ public readonly monitoringOptions: MonitoringOptions;
 
 ---
 
-##### `serviceConfiguration`<sup>Required</sup> <a name="serviceConfiguration" id="@devkit-io/constructs.ContainerServiceProps.property.serviceConfiguration"></a>
+##### `serviceConfiguration`<sup>Required</sup> <a name="serviceConfiguration" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.serviceConfiguration"></a>
 
 ```typescript
 public readonly serviceConfiguration: ServiceConfiguration;
@@ -815,7 +815,7 @@ public readonly serviceConfiguration: ServiceConfiguration;
 
 ---
 
-##### `serviceName`<sup>Required</sup> <a name="serviceName" id="@devkit-io/constructs.ContainerServiceProps.property.serviceName"></a>
+##### `serviceName`<sup>Required</sup> <a name="serviceName" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.serviceName"></a>
 
 ```typescript
 public readonly serviceName: string;
@@ -825,7 +825,7 @@ public readonly serviceName: string;
 
 ---
 
-##### `targetGroupArns`<sup>Required</sup> <a name="targetGroupArns" id="@devkit-io/constructs.ContainerServiceProps.property.targetGroupArns"></a>
+##### `targetGroupArns`<sup>Required</sup> <a name="targetGroupArns" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.targetGroupArns"></a>
 
 ```typescript
 public readonly targetGroupArns: string[];
@@ -835,7 +835,7 @@ public readonly targetGroupArns: string[];
 
 ---
 
-##### `certificate`<sup>Optional</sup> <a name="certificate" id="@devkit-io/constructs.ContainerServiceProps.property.certificate"></a>
+##### `certificate`<sup>Optional</sup> <a name="certificate" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;

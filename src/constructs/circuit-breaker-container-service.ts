@@ -68,7 +68,7 @@ export interface ServiceConfiguration {
   readonly logRetentionDays?: number;
 }
 
-export interface ContainerServiceProps {
+export interface CircuitBreakerContainerServiceProps {
   readonly certificate?: ICertificate;
   readonly cluster: ICluster;
   readonly monitoringOptions: MonitoringOptions;
@@ -87,11 +87,11 @@ export interface ContainerServiceProps {
  * - Customizable monitoring and alerting based on log patterns
  */
 export class CircuitBreakerContainerService extends Construct {
-  private props: ContainerServiceProps;
+  private props: CircuitBreakerContainerServiceProps;
   readonly service: Ec2Service;
   readonly serviceRole: IRole;
 
-  constructor(scope: Construct, id: string, props: ContainerServiceProps) {
+  constructor(scope: Construct, id: string, props: CircuitBreakerContainerServiceProps) {
     super(scope, id);
     this.props = props;
 
