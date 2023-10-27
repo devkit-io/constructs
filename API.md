@@ -334,7 +334,156 @@ The tree node.
 ---
 
 
+### SelfMutatingPipeline <a name="SelfMutatingPipeline" id="@devkit-io/constructs.SelfMutatingPipeline"></a>
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.SelfMutatingPipeline.Initializer"></a>
+
+```typescript
+import { SelfMutatingPipeline } from '@devkit-io/constructs'
+
+new SelfMutatingPipeline(scope: Construct, id: string, props: SelfMutatingPipelineProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipeline.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipeline.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipeline.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps">SelfMutatingPipelineProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.SelfMutatingPipeline.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.SelfMutatingPipeline.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.SelfMutatingPipeline.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.SelfMutatingPipelineProps">SelfMutatingPipelineProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipeline.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.SelfMutatingPipeline.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipeline.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.SelfMutatingPipeline.isConstruct"></a>
+
+```typescript
+import { SelfMutatingPipeline } from '@devkit-io/constructs'
+
+SelfMutatingPipeline.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.SelfMutatingPipeline.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipeline.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.SelfMutatingPipeline.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ## Structs <a name="Structs" id="Structs"></a>
+
+### EnvironmentVariable <a name="EnvironmentVariable" id="@devkit-io/constructs.EnvironmentVariable"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.EnvironmentVariable.Initializer"></a>
+
+```typescript
+import { EnvironmentVariable } from '@devkit-io/constructs'
+
+const environmentVariable: EnvironmentVariable = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EnvironmentVariable.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EnvironmentVariable.property.type">type</a></code> | <code>aws-cdk-lib.aws_codebuild.BuildEnvironmentVariableType</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EnvironmentVariable.property.value">value</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@devkit-io/constructs.EnvironmentVariable.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@devkit-io/constructs.EnvironmentVariable.property.type"></a>
+
+```typescript
+public readonly type: BuildEnvironmentVariableType;
+```
+
+- *Type:* aws-cdk-lib.aws_codebuild.BuildEnvironmentVariableType
+
+---
+
+##### `value`<sup>Required</sup> <a name="value" id="@devkit-io/constructs.EnvironmentVariable.property.value"></a>
+
+```typescript
+public readonly value: string;
+```
+
+- *Type:* string
+
+---
 
 ### MonitoredNodeLambdaProps <a name="MonitoredNodeLambdaProps" id="@devkit-io/constructs.MonitoredNodeLambdaProps"></a>
 
@@ -359,6 +508,7 @@ const monitoredNodeLambdaProps: MonitoredNodeLambdaProps = { ... }
 | <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps.property.bundleEnvironment">bundleEnvironment</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps.property.deploymentConfig">deploymentConfig</a></code> | <code>aws-cdk-lib.aws_codedeploy.LambdaDeploymentConfig</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps.property.memorySize">memorySize</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps.property.runtimeDuration">runtimeDuration</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps.property.runtimeEnvironment">runtimeEnvironment</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 
@@ -454,6 +604,16 @@ public readonly memorySize: number;
 
 ---
 
+##### `runtime`<sup>Optional</sup> <a name="runtime" id="@devkit-io/constructs.MonitoredNodeLambdaProps.property.runtime"></a>
+
+```typescript
+public readonly runtime: Runtime;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Runtime
+
+---
+
 ##### `runtimeDuration`<sup>Optional</sup> <a name="runtimeDuration" id="@devkit-io/constructs.MonitoredNodeLambdaProps.property.runtimeDuration"></a>
 
 ```typescript
@@ -494,6 +654,7 @@ const nextJsAmplifySiteProps: NextJsAmplifySiteProps = { ... }
 | <code><a href="#@devkit-io/constructs.NextJsAmplifySiteProps.property.environmentVariables">environmentVariables</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.NextJsAmplifySiteProps.property.repoName">repoName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.NextJsAmplifySiteProps.property.repoOwner">repoOwner</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.NextJsAmplifySiteProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
 
 ---
 
@@ -537,6 +698,16 @@ public readonly repoOwner: string;
 
 ---
 
+##### `domainName`<sup>Optional</sup> <a name="domainName" id="@devkit-io/constructs.NextJsAmplifySiteProps.property.domainName"></a>
+
+```typescript
+public readonly domainName: string;
+```
+
+- *Type:* string
+
+---
+
 ### S3CloudfrontAssetDistributionProps <a name="S3CloudfrontAssetDistributionProps" id="@devkit-io/constructs.S3CloudfrontAssetDistributionProps"></a>
 
 #### Initializer <a name="Initializer" id="@devkit-io/constructs.S3CloudfrontAssetDistributionProps.Initializer"></a>
@@ -573,6 +744,188 @@ public readonly domainNames: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+### SelfMutatingPipelineProps <a name="SelfMutatingPipelineProps" id="@devkit-io/constructs.SelfMutatingPipelineProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.SelfMutatingPipelineProps.Initializer"></a>
+
+```typescript
+import { SelfMutatingPipelineProps } from '@devkit-io/constructs'
+
+const selfMutatingPipelineProps: SelfMutatingPipelineProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.buildCommands">buildCommands</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.repositoryName">repositoryName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.sourceConnectionArn">sourceConnectionArn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.stages">stages</a></code> | <code>aws-cdk-lib.Stage[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.additionalPolicies">additionalPolicies</a></code> | <code>aws-cdk-lib.aws_iam.PolicyStatement[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.artifactBucket">artifactBucket</a></code> | <code>aws-cdk-lib.aws_s3.Bucket</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.branchName">branchName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.buildImage">buildImage</a></code> | <code>aws-cdk-lib.aws_codebuild.IBuildImage</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.buildTimeout">buildTimeout</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.cacheBucket">cacheBucket</a></code> | <code>aws-cdk-lib.aws_s3.Bucket</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.codeBuildComputeType">codeBuildComputeType</a></code> | <code>aws-cdk-lib.aws_codebuild.ComputeType</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.customRole">customRole</a></code> | <code>aws-cdk-lib.aws_iam.Role</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.environmentVariables">environmentVariables</a></code> | <code><a href="#@devkit-io/constructs.EnvironmentVariable">EnvironmentVariable</a>[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.notificationsTopic">notificationsTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | *No description.* |
+
+---
+
+##### `buildCommands`<sup>Required</sup> <a name="buildCommands" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.buildCommands"></a>
+
+```typescript
+public readonly buildCommands: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `repositoryName`<sup>Required</sup> <a name="repositoryName" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.repositoryName"></a>
+
+```typescript
+public readonly repositoryName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `sourceConnectionArn`<sup>Required</sup> <a name="sourceConnectionArn" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.sourceConnectionArn"></a>
+
+```typescript
+public readonly sourceConnectionArn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `stages`<sup>Required</sup> <a name="stages" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.stages"></a>
+
+```typescript
+public readonly stages: Stage[];
+```
+
+- *Type:* aws-cdk-lib.Stage[]
+
+---
+
+##### `additionalPolicies`<sup>Optional</sup> <a name="additionalPolicies" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.additionalPolicies"></a>
+
+```typescript
+public readonly additionalPolicies: PolicyStatement[];
+```
+
+- *Type:* aws-cdk-lib.aws_iam.PolicyStatement[]
+
+---
+
+##### `artifactBucket`<sup>Optional</sup> <a name="artifactBucket" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.artifactBucket"></a>
+
+```typescript
+public readonly artifactBucket: Bucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.Bucket
+
+---
+
+##### `branchName`<sup>Optional</sup> <a name="branchName" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.branchName"></a>
+
+```typescript
+public readonly branchName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `buildImage`<sup>Optional</sup> <a name="buildImage" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.buildImage"></a>
+
+```typescript
+public readonly buildImage: IBuildImage;
+```
+
+- *Type:* aws-cdk-lib.aws_codebuild.IBuildImage
+
+---
+
+##### `buildTimeout`<sup>Optional</sup> <a name="buildTimeout" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.buildTimeout"></a>
+
+```typescript
+public readonly buildTimeout: Duration;
+```
+
+- *Type:* aws-cdk-lib.Duration
+
+---
+
+##### `cacheBucket`<sup>Optional</sup> <a name="cacheBucket" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.cacheBucket"></a>
+
+```typescript
+public readonly cacheBucket: Bucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.Bucket
+
+---
+
+##### `codeBuildComputeType`<sup>Optional</sup> <a name="codeBuildComputeType" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.codeBuildComputeType"></a>
+
+```typescript
+public readonly codeBuildComputeType: ComputeType;
+```
+
+- *Type:* aws-cdk-lib.aws_codebuild.ComputeType
+
+---
+
+##### `customRole`<sup>Optional</sup> <a name="customRole" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.customRole"></a>
+
+```typescript
+public readonly customRole: Role;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.Role
+
+---
+
+##### `environmentVariables`<sup>Optional</sup> <a name="environmentVariables" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.environmentVariables"></a>
+
+```typescript
+public readonly environmentVariables: EnvironmentVariable[];
+```
+
+- *Type:* <a href="#@devkit-io/constructs.EnvironmentVariable">EnvironmentVariable</a>[]
+
+---
+
+##### `notificationsTopic`<sup>Optional</sup> <a name="notificationsTopic" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.notificationsTopic"></a>
+
+```typescript
+public readonly notificationsTopic: ITopic;
+```
+
+- *Type:* aws-cdk-lib.aws_sns.ITopic
+
+---
+
+##### `vpc`<sup>Optional</sup> <a name="vpc" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.vpc"></a>
+
+```typescript
+public readonly vpc: IVpc;
+```
+
+- *Type:* aws-cdk-lib.aws_ec2.IVpc
 
 ---
 

@@ -13,6 +13,7 @@ export interface MonitoredNodeLambdaProps {
   readonly description: string;
   readonly handler: string;
   readonly memorySize?: number;
+  readonly runtime?: Runtime;
   readonly runtimeDuration?: Duration;
   readonly runtimeEnvironment?: Record<string, string>;
   readonly deploymentConfig?: LambdaDeploymentConfig;
@@ -52,7 +53,7 @@ export class MonitoredNodeLambda extends Construct {
     });
 
     return new Function(this, 'MonitoredNodeFunction', {
-      runtime: Runtime.NODEJS_18_X,
+      runtime: props.runtime ?? Runtime.NODEJS_18_X,
       timeout: props.runtimeDuration ?? Duration.minutes(1),
       description: props.description,
       handler: props.handler,
