@@ -2,6 +2,135 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
+### CircuitBreakerContainerService <a name="CircuitBreakerContainerService" id="@devkit-io/constructs.CircuitBreakerContainerService"></a>
+
+The `CircuitBreakerContainerService` class creates an ECS Service on a provided ECS cluster and attaches to the provided target groups.
+
+Features include:
+- Logging with customizable retention periods
+- Circuit breaker rollback configurations
+- Optional EBS volume configurations and mounts
+- Customizable monitoring and alerting based on log patterns
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.CircuitBreakerContainerService.Initializer"></a>
+
+```typescript
+import { CircuitBreakerContainerService } from '@devkit-io/constructs'
+
+new CircuitBreakerContainerService(scope: Construct, id: string, props: ContainerServiceProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.ContainerServiceProps">ContainerServiceProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.CircuitBreakerContainerService.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.ContainerServiceProps">ContainerServiceProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.CircuitBreakerContainerService.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.CircuitBreakerContainerService.isConstruct"></a>
+
+```typescript
+import { CircuitBreakerContainerService } from '@devkit-io/constructs'
+
+CircuitBreakerContainerService.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.CircuitBreakerContainerService.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.property.service">service</a></code> | <code>aws-cdk-lib.aws_ecs.Ec2Service</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.CircuitBreakerContainerService.property.serviceRole">serviceRole</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.CircuitBreakerContainerService.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `service`<sup>Required</sup> <a name="service" id="@devkit-io/constructs.CircuitBreakerContainerService.property.service"></a>
+
+```typescript
+public readonly service: Ec2Service;
+```
+
+- *Type:* aws-cdk-lib.aws_ecs.Ec2Service
+
+---
+
+##### `serviceRole`<sup>Required</sup> <a name="serviceRole" id="@devkit-io/constructs.CircuitBreakerContainerService.property.serviceRole"></a>
+
+```typescript
+public readonly serviceRole: IRole;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.IRole
+
+---
+
+
 ### DocusaurusSite <a name="DocusaurusSite" id="@devkit-io/constructs.DocusaurusSite"></a>
 
 #### Initializers <a name="Initializers" id="@devkit-io/constructs.DocusaurusSite.Initializer"></a>
@@ -633,6 +762,89 @@ The tree node.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
+### ContainerServiceProps <a name="ContainerServiceProps" id="@devkit-io/constructs.ContainerServiceProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.ContainerServiceProps.Initializer"></a>
+
+```typescript
+import { ContainerServiceProps } from '@devkit-io/constructs'
+
+const containerServiceProps: ContainerServiceProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.cluster">cluster</a></code> | <code>aws-cdk-lib.aws_ecs.ICluster</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.monitoringOptions">monitoringOptions</a></code> | <code><a href="#@devkit-io/constructs.MonitoringOptions">MonitoringOptions</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.serviceConfiguration">serviceConfiguration</a></code> | <code><a href="#@devkit-io/constructs.ServiceConfiguration">ServiceConfiguration</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.serviceName">serviceName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.targetGroupArns">targetGroupArns</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ContainerServiceProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+
+---
+
+##### `cluster`<sup>Required</sup> <a name="cluster" id="@devkit-io/constructs.ContainerServiceProps.property.cluster"></a>
+
+```typescript
+public readonly cluster: ICluster;
+```
+
+- *Type:* aws-cdk-lib.aws_ecs.ICluster
+
+---
+
+##### `monitoringOptions`<sup>Required</sup> <a name="monitoringOptions" id="@devkit-io/constructs.ContainerServiceProps.property.monitoringOptions"></a>
+
+```typescript
+public readonly monitoringOptions: MonitoringOptions;
+```
+
+- *Type:* <a href="#@devkit-io/constructs.MonitoringOptions">MonitoringOptions</a>
+
+---
+
+##### `serviceConfiguration`<sup>Required</sup> <a name="serviceConfiguration" id="@devkit-io/constructs.ContainerServiceProps.property.serviceConfiguration"></a>
+
+```typescript
+public readonly serviceConfiguration: ServiceConfiguration;
+```
+
+- *Type:* <a href="#@devkit-io/constructs.ServiceConfiguration">ServiceConfiguration</a>
+
+---
+
+##### `serviceName`<sup>Required</sup> <a name="serviceName" id="@devkit-io/constructs.ContainerServiceProps.property.serviceName"></a>
+
+```typescript
+public readonly serviceName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `targetGroupArns`<sup>Required</sup> <a name="targetGroupArns" id="@devkit-io/constructs.ContainerServiceProps.property.targetGroupArns"></a>
+
+```typescript
+public readonly targetGroupArns: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `certificate`<sup>Optional</sup> <a name="certificate" id="@devkit-io/constructs.ContainerServiceProps.property.certificate"></a>
+
+```typescript
+public readonly certificate: ICertificate;
+```
+
+- *Type:* aws-cdk-lib.aws_certificatemanager.ICertificate
+
+---
+
 ### DocusaurusSiteProps <a name="DocusaurusSiteProps" id="@devkit-io/constructs.DocusaurusSiteProps"></a>
 
 #### Initializer <a name="Initializer" id="@devkit-io/constructs.DocusaurusSiteProps.Initializer"></a>
@@ -699,6 +911,89 @@ public readonly image: DockerImage;
 
 ```typescript
 public readonly sourcePath: string;
+```
+
+- *Type:* string
+
+---
+
+### EbsVolumeConfiguration <a name="EbsVolumeConfiguration" id="@devkit-io/constructs.EbsVolumeConfiguration"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.EbsVolumeConfiguration.Initializer"></a>
+
+```typescript
+import { EbsVolumeConfiguration } from '@devkit-io/constructs'
+
+const ebsVolumeConfiguration: EbsVolumeConfiguration = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration.property.deleteOnTermination">deleteOnTermination</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration.property.mountPoint">mountPoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration.property.readOnly">readOnly</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration.property.volumeName">volumeName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration.property.volumeSize">volumeSize</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration.property.volumeType">volumeType</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `deleteOnTermination`<sup>Required</sup> <a name="deleteOnTermination" id="@devkit-io/constructs.EbsVolumeConfiguration.property.deleteOnTermination"></a>
+
+```typescript
+public readonly deleteOnTermination: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `mountPoint`<sup>Required</sup> <a name="mountPoint" id="@devkit-io/constructs.EbsVolumeConfiguration.property.mountPoint"></a>
+
+```typescript
+public readonly mountPoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `readOnly`<sup>Required</sup> <a name="readOnly" id="@devkit-io/constructs.EbsVolumeConfiguration.property.readOnly"></a>
+
+```typescript
+public readonly readOnly: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `volumeName`<sup>Required</sup> <a name="volumeName" id="@devkit-io/constructs.EbsVolumeConfiguration.property.volumeName"></a>
+
+```typescript
+public readonly volumeName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `volumeSize`<sup>Required</sup> <a name="volumeSize" id="@devkit-io/constructs.EbsVolumeConfiguration.property.volumeSize"></a>
+
+```typescript
+public readonly volumeSize: number;
+```
+
+- *Type:* number
+
+---
+
+##### `volumeType`<sup>Required</sup> <a name="volumeType" id="@devkit-io/constructs.EbsVolumeConfiguration.property.volumeType"></a>
+
+```typescript
+public readonly volumeType: string;
 ```
 
 - *Type:* string
@@ -904,6 +1199,71 @@ public readonly runtimeEnvironment: {[ key: string ]: string};
 
 ---
 
+### MonitoringOptions <a name="MonitoringOptions" id="@devkit-io/constructs.MonitoringOptions"></a>
+
+`MonitoringOptions` provides configurations for setting up monitoring for the service.
+
+It supports setting up paging alerts and customizing error patterns for metric filters.
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.MonitoringOptions.Initializer"></a>
+
+```typescript
+import { MonitoringOptions } from '@devkit-io/constructs'
+
+const monitoringOptions: MonitoringOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.MonitoringOptions.property.errorPattern">errorPattern</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.MonitoringOptions.property.evaluationPeriods">evaluationPeriods</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.MonitoringOptions.property.paging">paging</a></code> | <code><a href="#@devkit-io/constructs.PagingOptions">PagingOptions</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.MonitoringOptions.property.threshold">threshold</a></code> | <code>number</code> | *No description.* |
+
+---
+
+##### `errorPattern`<sup>Optional</sup> <a name="errorPattern" id="@devkit-io/constructs.MonitoringOptions.property.errorPattern"></a>
+
+```typescript
+public readonly errorPattern: string;
+```
+
+- *Type:* string
+
+---
+
+##### `evaluationPeriods`<sup>Optional</sup> <a name="evaluationPeriods" id="@devkit-io/constructs.MonitoringOptions.property.evaluationPeriods"></a>
+
+```typescript
+public readonly evaluationPeriods: number;
+```
+
+- *Type:* number
+
+---
+
+##### `paging`<sup>Optional</sup> <a name="paging" id="@devkit-io/constructs.MonitoringOptions.property.paging"></a>
+
+```typescript
+public readonly paging: PagingOptions;
+```
+
+- *Type:* <a href="#@devkit-io/constructs.PagingOptions">PagingOptions</a>
+
+---
+
+##### `threshold`<sup>Optional</sup> <a name="threshold" id="@devkit-io/constructs.MonitoringOptions.property.threshold"></a>
+
+```typescript
+public readonly threshold: number;
+```
+
+- *Type:* number
+
+---
+
 ### NextJsAmplifySiteProps <a name="NextJsAmplifySiteProps" id="@devkit-io/constructs.NextJsAmplifySiteProps"></a>
 
 Configuration for the Amplify application deployment.
@@ -975,6 +1335,49 @@ public readonly domainName: string;
 ```
 
 - *Type:* string
+
+---
+
+### PagingOptions <a name="PagingOptions" id="@devkit-io/constructs.PagingOptions"></a>
+
+`PagingOptions` defines the configuration for setting up paging alerts.
+
+If `pagingEnabled` is true, alarms will send notifications to the provided `pageEmailAddresses`.
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.PagingOptions.Initializer"></a>
+
+```typescript
+import { PagingOptions } from '@devkit-io/constructs'
+
+const pagingOptions: PagingOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.PagingOptions.property.pageEmailAddresses">pageEmailAddresses</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.PagingOptions.property.pagingEnabled">pagingEnabled</a></code> | <code>boolean</code> | *No description.* |
+
+---
+
+##### `pageEmailAddresses`<sup>Required</sup> <a name="pageEmailAddresses" id="@devkit-io/constructs.PagingOptions.property.pageEmailAddresses"></a>
+
+```typescript
+public readonly pageEmailAddresses: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `pagingEnabled`<sup>Required</sup> <a name="pagingEnabled" id="@devkit-io/constructs.PagingOptions.property.pagingEnabled"></a>
+
+```typescript
+public readonly pagingEnabled: boolean;
+```
+
+- *Type:* boolean
 
 ---
 
@@ -1196,6 +1599,155 @@ public readonly vpc: IVpc;
 ```
 
 - *Type:* aws-cdk-lib.aws_ec2.IVpc
+
+---
+
+### ServiceConfiguration <a name="ServiceConfiguration" id="@devkit-io/constructs.ServiceConfiguration"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.ServiceConfiguration.Initializer"></a>
+
+```typescript
+import { ServiceConfiguration } from '@devkit-io/constructs'
+
+const serviceConfiguration: ServiceConfiguration = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.desiredCount">desiredCount</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.healthCheckPath">healthCheckPath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.memoryLimit">memoryLimit</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.serviceImage">serviceImage</a></code> | <code>aws-cdk-lib.aws_ecr_assets.DockerImageAsset</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.servicePort">servicePort</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.circuitBreakerEnabled">circuitBreakerEnabled</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.ebsVolumeConfiguration">ebsVolumeConfiguration</a></code> | <code><a href="#@devkit-io/constructs.EbsVolumeConfiguration">EbsVolumeConfiguration</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.logRetentionDays">logRetentionDays</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.maxHealthyPercent">maxHealthyPercent</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.minHealthyPercent">minHealthyPercent</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.serviceContainerEnvVars">serviceContainerEnvVars</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ServiceConfiguration.property.serviceContainerSecrets">serviceContainerSecrets</a></code> | <code>{[ key: string ]: aws-cdk-lib.aws_ecs.Secret}</code> | *No description.* |
+
+---
+
+##### `desiredCount`<sup>Required</sup> <a name="desiredCount" id="@devkit-io/constructs.ServiceConfiguration.property.desiredCount"></a>
+
+```typescript
+public readonly desiredCount: number;
+```
+
+- *Type:* number
+
+---
+
+##### `healthCheckPath`<sup>Required</sup> <a name="healthCheckPath" id="@devkit-io/constructs.ServiceConfiguration.property.healthCheckPath"></a>
+
+```typescript
+public readonly healthCheckPath: string;
+```
+
+- *Type:* string
+
+---
+
+##### `memoryLimit`<sup>Required</sup> <a name="memoryLimit" id="@devkit-io/constructs.ServiceConfiguration.property.memoryLimit"></a>
+
+```typescript
+public readonly memoryLimit: number;
+```
+
+- *Type:* number
+
+---
+
+##### `serviceImage`<sup>Required</sup> <a name="serviceImage" id="@devkit-io/constructs.ServiceConfiguration.property.serviceImage"></a>
+
+```typescript
+public readonly serviceImage: DockerImageAsset;
+```
+
+- *Type:* aws-cdk-lib.aws_ecr_assets.DockerImageAsset
+
+---
+
+##### `servicePort`<sup>Required</sup> <a name="servicePort" id="@devkit-io/constructs.ServiceConfiguration.property.servicePort"></a>
+
+```typescript
+public readonly servicePort: number;
+```
+
+- *Type:* number
+
+---
+
+##### `circuitBreakerEnabled`<sup>Optional</sup> <a name="circuitBreakerEnabled" id="@devkit-io/constructs.ServiceConfiguration.property.circuitBreakerEnabled"></a>
+
+```typescript
+public readonly circuitBreakerEnabled: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `ebsVolumeConfiguration`<sup>Optional</sup> <a name="ebsVolumeConfiguration" id="@devkit-io/constructs.ServiceConfiguration.property.ebsVolumeConfiguration"></a>
+
+```typescript
+public readonly ebsVolumeConfiguration: EbsVolumeConfiguration;
+```
+
+- *Type:* <a href="#@devkit-io/constructs.EbsVolumeConfiguration">EbsVolumeConfiguration</a>
+
+---
+
+##### `logRetentionDays`<sup>Optional</sup> <a name="logRetentionDays" id="@devkit-io/constructs.ServiceConfiguration.property.logRetentionDays"></a>
+
+```typescript
+public readonly logRetentionDays: number;
+```
+
+- *Type:* number
+
+---
+
+##### `maxHealthyPercent`<sup>Optional</sup> <a name="maxHealthyPercent" id="@devkit-io/constructs.ServiceConfiguration.property.maxHealthyPercent"></a>
+
+```typescript
+public readonly maxHealthyPercent: number;
+```
+
+- *Type:* number
+
+---
+
+##### `minHealthyPercent`<sup>Optional</sup> <a name="minHealthyPercent" id="@devkit-io/constructs.ServiceConfiguration.property.minHealthyPercent"></a>
+
+```typescript
+public readonly minHealthyPercent: number;
+```
+
+- *Type:* number
+
+---
+
+##### `serviceContainerEnvVars`<sup>Optional</sup> <a name="serviceContainerEnvVars" id="@devkit-io/constructs.ServiceConfiguration.property.serviceContainerEnvVars"></a>
+
+```typescript
+public readonly serviceContainerEnvVars: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `serviceContainerSecrets`<sup>Optional</sup> <a name="serviceContainerSecrets" id="@devkit-io/constructs.ServiceConfiguration.property.serviceContainerSecrets"></a>
+
+```typescript
+public readonly serviceContainerSecrets: {[ key: string ]: Secret};
+```
+
+- *Type:* {[ key: string ]: aws-cdk-lib.aws_ecs.Secret}
 
 ---
 
