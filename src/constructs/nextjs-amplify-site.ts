@@ -15,6 +15,7 @@ export interface NextJsAmplifySiteProps {
   readonly repoOwner: string;
   readonly repoName: string;
   readonly environmentVariables: { [key: string]: string };
+  readonly domainName?: string;
 }
 
 
@@ -60,15 +61,17 @@ export class NextJsAmplifySite extends Construct {
     cfnBranch.framework = 'Next.js - SSR';
 
     new CfnOutput(this, `AmplifyAppId-${props.repoName}`, {
+      description: `AmplifyAppId for ${props.repoName}`,
       value: amplifyApp.appId,
     });
 
-    // const domain = amplifyApp.addDomain('your-domain.com', {
-    //   autoSubdomainCreationPatterns: ['feature/*'],
-    //   enableAutoSubdomain: true,
-    // });
-    //
-    // domain.mapRoot(mainBranch);
+    if (props.domainName) {
+      const domain = amplifyApp.addDomain(props.domainName, {
+        autoSubdomainCreationPatterns: ['feature/*'],
+        enableAutoSubdomain: true,
+      });
+      domain.mapRoot(mainBranch);
+    }
   }
 
   private createBuildSpec(props: NextJsAmplifySiteProps): BuildSpec {
