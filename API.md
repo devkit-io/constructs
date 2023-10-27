@@ -2,6 +2,105 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
+### DocusaurusSite <a name="DocusaurusSite" id="@devkit-io/constructs.DocusaurusSite"></a>
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.DocusaurusSite.Initializer"></a>
+
+```typescript
+import { DocusaurusSite } from '@devkit-io/constructs'
+
+new DocusaurusSite(scope: Construct, id: string, props: DocusaurusSiteProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.DocusaurusSite.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.DocusaurusSite.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.DocusaurusSite.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.DocusaurusSiteProps">DocusaurusSiteProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.DocusaurusSite.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.DocusaurusSite.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.DocusaurusSite.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.DocusaurusSiteProps">DocusaurusSiteProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.DocusaurusSite.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.DocusaurusSite.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.DocusaurusSite.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.DocusaurusSite.isConstruct"></a>
+
+```typescript
+import { DocusaurusSite } from '@devkit-io/constructs'
+
+DocusaurusSite.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.DocusaurusSite.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.DocusaurusSite.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.DocusaurusSite.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ### MonitoredNodeLambda <a name="MonitoredNodeLambda" id="@devkit-io/constructs.MonitoredNodeLambda"></a>
 
 A construct to create a monitored Node.js Lambda function with deployment capabilities.
@@ -434,6 +533,67 @@ The tree node.
 
 
 ## Structs <a name="Structs" id="Structs"></a>
+
+### DocusaurusSiteProps <a name="DocusaurusSiteProps" id="@devkit-io/constructs.DocusaurusSiteProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.DocusaurusSiteProps.Initializer"></a>
+
+```typescript
+import { DocusaurusSiteProps } from '@devkit-io/constructs'
+
+const docusaurusSiteProps: DocusaurusSiteProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.certificateArn">certificateArn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.domainNames">domainNames</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.DocusaurusSiteProps.property.sourcePath">sourcePath</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `nodeEnv`<sup>Required</sup> <a name="nodeEnv" id="@devkit-io/constructs.DocusaurusSiteProps.property.nodeEnv"></a>
+
+```typescript
+public readonly nodeEnv: string;
+```
+
+- *Type:* string
+
+---
+
+##### `certificateArn`<sup>Optional</sup> <a name="certificateArn" id="@devkit-io/constructs.DocusaurusSiteProps.property.certificateArn"></a>
+
+```typescript
+public readonly certificateArn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `domainNames`<sup>Optional</sup> <a name="domainNames" id="@devkit-io/constructs.DocusaurusSiteProps.property.domainNames"></a>
+
+```typescript
+public readonly domainNames: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `sourcePath`<sup>Optional</sup> <a name="sourcePath" id="@devkit-io/constructs.DocusaurusSiteProps.property.sourcePath"></a>
+
+```typescript
+public readonly sourcePath: string;
+```
+
+- *Type:* string
+
+---
 
 ### EnvironmentVariable <a name="EnvironmentVariable" id="@devkit-io/constructs.EnvironmentVariable"></a>
 
