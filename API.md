@@ -532,6 +532,105 @@ The tree node.
 ---
 
 
+### StaticSiteBase <a name="StaticSiteBase" id="@devkit-io/constructs.StaticSiteBase"></a>
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.StaticSiteBase.Initializer"></a>
+
+```typescript
+import { StaticSiteBase } from '@devkit-io/constructs'
+
+new StaticSiteBase(scope: Construct, id: string, props: StaticSiteProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.StaticSiteBase.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.StaticSiteBase.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.StaticSiteBase.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.StaticSiteProps">StaticSiteProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.StaticSiteBase.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.StaticSiteBase.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.StaticSiteBase.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.StaticSiteProps">StaticSiteProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.StaticSiteBase.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.StaticSiteBase.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.StaticSiteBase.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.StaticSiteBase.isConstruct"></a>
+
+```typescript
+import { StaticSiteBase } from '@devkit-io/constructs'
+
+StaticSiteBase.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.StaticSiteBase.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.StaticSiteBase.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.StaticSiteBase.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ## Structs <a name="Structs" id="Structs"></a>
 
 ### DocusaurusSiteProps <a name="DocusaurusSiteProps" id="@devkit-io/constructs.DocusaurusSiteProps"></a>
@@ -1097,6 +1196,56 @@ public readonly vpc: IVpc;
 ```
 
 - *Type:* aws-cdk-lib.aws_ec2.IVpc
+
+---
+
+### StaticSiteProps <a name="StaticSiteProps" id="@devkit-io/constructs.StaticSiteProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.StaticSiteProps.Initializer"></a>
+
+```typescript
+import { StaticSiteProps } from '@devkit-io/constructs'
+
+const staticSiteProps: StaticSiteProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.StaticSiteProps.property.sourceAsset">sourceAsset</a></code> | <code>aws-cdk-lib.aws_s3_deployment.ISource</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.StaticSiteProps.property.certificateArn">certificateArn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.StaticSiteProps.property.domainNames">domainNames</a></code> | <code>string[]</code> | *No description.* |
+
+---
+
+##### `sourceAsset`<sup>Required</sup> <a name="sourceAsset" id="@devkit-io/constructs.StaticSiteProps.property.sourceAsset"></a>
+
+```typescript
+public readonly sourceAsset: ISource;
+```
+
+- *Type:* aws-cdk-lib.aws_s3_deployment.ISource
+
+---
+
+##### `certificateArn`<sup>Optional</sup> <a name="certificateArn" id="@devkit-io/constructs.StaticSiteProps.property.certificateArn"></a>
+
+```typescript
+public readonly certificateArn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `domainNames`<sup>Optional</sup> <a name="domainNames" id="@devkit-io/constructs.StaticSiteProps.property.domainNames"></a>
+
+```typescript
+public readonly domainNames: string[];
+```
+
+- *Type:* string[]
 
 ---
 
