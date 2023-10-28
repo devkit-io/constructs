@@ -230,6 +230,118 @@ The tree node.
 ---
 
 
+### EbsEnabledEcsCluster <a name="EbsEnabledEcsCluster" id="@devkit-io/constructs.EbsEnabledEcsCluster"></a>
+
+A construct that creates an ECS Cluster with optional support for EBS volumes.
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.EbsEnabledEcsCluster.Initializer"></a>
+
+```typescript
+import { EbsEnabledEcsCluster } from '@devkit-io/constructs'
+
+new EbsEnabledEcsCluster(scope: Construct, id: string, props: EbsEnabledEcsClusterProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps">EbsEnabledEcsClusterProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.EbsEnabledEcsCluster.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.EbsEnabledEcsCluster.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.EbsEnabledEcsCluster.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps">EbsEnabledEcsClusterProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.EbsEnabledEcsCluster.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.EbsEnabledEcsCluster.isConstruct"></a>
+
+```typescript
+import { EbsEnabledEcsCluster } from '@devkit-io/constructs'
+
+EbsEnabledEcsCluster.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.EbsEnabledEcsCluster.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsCluster.property.cluster">cluster</a></code> | <code>aws-cdk-lib.aws_ecs.Cluster</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.EbsEnabledEcsCluster.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cluster`<sup>Required</sup> <a name="cluster" id="@devkit-io/constructs.EbsEnabledEcsCluster.property.cluster"></a>
+
+```typescript
+public readonly cluster: Cluster;
+```
+
+- *Type:* aws-cdk-lib.aws_ecs.Cluster
+
+---
+
+
 ### MonitoredNodeLambda <a name="MonitoredNodeLambda" id="@devkit-io/constructs.MonitoredNodeLambda"></a>
 
 A construct to create a monitored Node.js Lambda function with deployment capabilities.
@@ -914,6 +1026,135 @@ public readonly sourcePath: string;
 ```
 
 - *Type:* string
+
+---
+
+### EbsEnabledEcsClusterProps <a name="EbsEnabledEcsClusterProps" id="@devkit-io/constructs.EbsEnabledEcsClusterProps"></a>
+
+Properties required for the EbsEnabledEcsCluster.
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.Initializer"></a>
+
+```typescript
+import { EbsEnabledEcsClusterProps } from '@devkit-io/constructs'
+
+const ebsEnabledEcsClusterProps: EbsEnabledEcsClusterProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.desiredCapacity">desiredCapacity</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.instanceType">instanceType</a></code> | <code>aws-cdk-lib.aws_ec2.InstanceType</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.maxCapacity">maxCapacity</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.minCapacity">minCapacity</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.region">region</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.securityGroup">securityGroup</a></code> | <code>aws-cdk-lib.aws_ec2.ISecurityGroup</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.addEbsSupport">addEbsSupport</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.machineImage">machineImage</a></code> | <code>aws-cdk-lib.aws_ecs.EcsOptimizedImage</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EbsEnabledEcsClusterProps.property.newInstancesProtectedFromScaleIn">newInstancesProtectedFromScaleIn</a></code> | <code>boolean</code> | *No description.* |
+
+---
+
+##### `desiredCapacity`<sup>Required</sup> <a name="desiredCapacity" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.desiredCapacity"></a>
+
+```typescript
+public readonly desiredCapacity: number;
+```
+
+- *Type:* number
+
+---
+
+##### `instanceType`<sup>Required</sup> <a name="instanceType" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.instanceType"></a>
+
+```typescript
+public readonly instanceType: InstanceType;
+```
+
+- *Type:* aws-cdk-lib.aws_ec2.InstanceType
+
+---
+
+##### `maxCapacity`<sup>Required</sup> <a name="maxCapacity" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.maxCapacity"></a>
+
+```typescript
+public readonly maxCapacity: number;
+```
+
+- *Type:* number
+
+---
+
+##### `minCapacity`<sup>Required</sup> <a name="minCapacity" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.minCapacity"></a>
+
+```typescript
+public readonly minCapacity: number;
+```
+
+- *Type:* number
+
+---
+
+##### `region`<sup>Required</sup> <a name="region" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.region"></a>
+
+```typescript
+public readonly region: string;
+```
+
+- *Type:* string
+
+---
+
+##### `securityGroup`<sup>Required</sup> <a name="securityGroup" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.securityGroup"></a>
+
+```typescript
+public readonly securityGroup: ISecurityGroup;
+```
+
+- *Type:* aws-cdk-lib.aws_ec2.ISecurityGroup
+
+---
+
+##### `vpc`<sup>Required</sup> <a name="vpc" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.vpc"></a>
+
+```typescript
+public readonly vpc: IVpc;
+```
+
+- *Type:* aws-cdk-lib.aws_ec2.IVpc
+
+---
+
+##### `addEbsSupport`<sup>Optional</sup> <a name="addEbsSupport" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.addEbsSupport"></a>
+
+```typescript
+public readonly addEbsSupport: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `machineImage`<sup>Optional</sup> <a name="machineImage" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.machineImage"></a>
+
+```typescript
+public readonly machineImage: EcsOptimizedImage;
+```
+
+- *Type:* aws-cdk-lib.aws_ecs.EcsOptimizedImage
+
+---
+
+##### `newInstancesProtectedFromScaleIn`<sup>Optional</sup> <a name="newInstancesProtectedFromScaleIn" id="@devkit-io/constructs.EbsEnabledEcsClusterProps.property.newInstancesProtectedFromScaleIn"></a>
+
+```typescript
+public readonly newInstancesProtectedFromScaleIn: boolean;
+```
+
+- *Type:* boolean
 
 ---
 
