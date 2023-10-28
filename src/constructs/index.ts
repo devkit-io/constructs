@@ -1,4 +1,5 @@
 export * from './circuit-breaker-container-service';
+export * from './ebs-enabled-ecs-cluster';
 export * from './docusaurus-site';
 export * from './monitored-node-lambda';
 export * from './nextjs-amplify-site';
