@@ -777,6 +777,109 @@ The tree node.
 ---
 
 
+### ScheduledLambda <a name="ScheduledLambda" id="@devkit-io/constructs.ScheduledLambda"></a>
+
+A construct to create a scheduled Lambda function.
+
+This can either create a new MonitoredNodeLambda or use an existing Lambda function.
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.ScheduledLambda.Initializer"></a>
+
+```typescript
+import { ScheduledLambda } from '@devkit-io/constructs'
+
+new ScheduledLambda(scope: Construct, id: string, props: ScheduledLambdaProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.ScheduledLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambda.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.ScheduledLambdaProps">ScheduledLambdaProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.ScheduledLambda.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.ScheduledLambda.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.ScheduledLambda.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.ScheduledLambdaProps">ScheduledLambdaProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.ScheduledLambda.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.ScheduledLambda.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.ScheduledLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.ScheduledLambda.isConstruct"></a>
+
+```typescript
+import { ScheduledLambda } from '@devkit-io/constructs'
+
+ScheduledLambda.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.ScheduledLambda.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.ScheduledLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.ScheduledLambda.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ### SelfMutatingPipeline <a name="SelfMutatingPipeline" id="@devkit-io/constructs.SelfMutatingPipeline"></a>
 
 #### Initializers <a name="Initializers" id="@devkit-io/constructs.SelfMutatingPipeline.Initializer"></a>
@@ -1860,6 +1963,89 @@ public readonly memorySize: number;
 ---
 
 ##### `runtime`<sup>Optional</sup> <a name="runtime" id="@devkit-io/constructs.S3EventLambdaProps.property.runtime"></a>
+
+```typescript
+public readonly runtime: Runtime;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Runtime
+
+---
+
+### ScheduledLambdaProps <a name="ScheduledLambdaProps" id="@devkit-io/constructs.ScheduledLambdaProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.ScheduledLambdaProps.Initializer"></a>
+
+```typescript
+import { ScheduledLambdaProps } from '@devkit-io/constructs'
+
+const scheduledLambdaProps: ScheduledLambdaProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.ScheduledLambdaProps.property.scheduleExpression">scheduleExpression</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambdaProps.property.codePath">codePath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambdaProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambdaProps.property.handler">handler</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambdaProps.property.lambdaFunction">lambdaFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.ScheduledLambdaProps.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | *No description.* |
+
+---
+
+##### `scheduleExpression`<sup>Required</sup> <a name="scheduleExpression" id="@devkit-io/constructs.ScheduledLambdaProps.property.scheduleExpression"></a>
+
+```typescript
+public readonly scheduleExpression: string;
+```
+
+- *Type:* string
+
+---
+
+##### `codePath`<sup>Optional</sup> <a name="codePath" id="@devkit-io/constructs.ScheduledLambdaProps.property.codePath"></a>
+
+```typescript
+public readonly codePath: string;
+```
+
+- *Type:* string
+
+---
+
+##### `environment`<sup>Optional</sup> <a name="environment" id="@devkit-io/constructs.ScheduledLambdaProps.property.environment"></a>
+
+```typescript
+public readonly environment: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `handler`<sup>Optional</sup> <a name="handler" id="@devkit-io/constructs.ScheduledLambdaProps.property.handler"></a>
+
+```typescript
+public readonly handler: string;
+```
+
+- *Type:* string
+
+---
+
+##### `lambdaFunction`<sup>Optional</sup> <a name="lambdaFunction" id="@devkit-io/constructs.ScheduledLambdaProps.property.lambdaFunction"></a>
+
+```typescript
+public readonly lambdaFunction: Function;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Function
+
+---
+
+##### `runtime`<sup>Optional</sup> <a name="runtime" id="@devkit-io/constructs.ScheduledLambdaProps.property.runtime"></a>
 
 ```typescript
 public readonly runtime: Runtime;
