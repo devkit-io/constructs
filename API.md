@@ -674,6 +674,109 @@ The tree node.
 ---
 
 
+### S3EventTriggeredLambda <a name="S3EventTriggeredLambda" id="@devkit-io/constructs.S3EventTriggeredLambda"></a>
+
+A construct to create a Lambda function triggered by S3 bucket creation events.
+
+This can either create a new MonitoredNodeLambda or use an existing Lambda function.
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.S3EventTriggeredLambda.Initializer"></a>
+
+```typescript
+import { S3EventTriggeredLambda } from '@devkit-io/constructs'
+
+new S3EventTriggeredLambda(scope: Construct, id: string, props: S3EventLambdaProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.S3EventTriggeredLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventTriggeredLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventTriggeredLambda.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.S3EventLambdaProps">S3EventLambdaProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.S3EventTriggeredLambda.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.S3EventTriggeredLambda.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.S3EventTriggeredLambda.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.S3EventLambdaProps">S3EventLambdaProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.S3EventTriggeredLambda.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.S3EventTriggeredLambda.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.S3EventTriggeredLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.S3EventTriggeredLambda.isConstruct"></a>
+
+```typescript
+import { S3EventTriggeredLambda } from '@devkit-io/constructs'
+
+S3EventTriggeredLambda.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.S3EventTriggeredLambda.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.S3EventTriggeredLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.S3EventTriggeredLambda.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ### SelfMutatingPipeline <a name="SelfMutatingPipeline" id="@devkit-io/constructs.SelfMutatingPipeline"></a>
 
 #### Initializers <a name="Initializers" id="@devkit-io/constructs.SelfMutatingPipeline.Initializer"></a>
@@ -1658,6 +1761,111 @@ public readonly domainNames: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+### S3EventLambdaProps <a name="S3EventLambdaProps" id="@devkit-io/constructs.S3EventLambdaProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.S3EventLambdaProps.Initializer"></a>
+
+```typescript
+import { S3EventLambdaProps } from '@devkit-io/constructs'
+
+const s3EventLambdaProps: S3EventLambdaProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.codePath">codePath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.eventTypeNotifications">eventTypeNotifications</a></code> | <code>aws-cdk-lib.aws_s3.EventType[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.handler">handler</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.lambdaFunction">lambdaFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.memorySize">memorySize</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.S3EventLambdaProps.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | *No description.* |
+
+---
+
+##### `bucket`<sup>Required</sup> <a name="bucket" id="@devkit-io/constructs.S3EventLambdaProps.property.bucket"></a>
+
+```typescript
+public readonly bucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+
+---
+
+##### `codePath`<sup>Optional</sup> <a name="codePath" id="@devkit-io/constructs.S3EventLambdaProps.property.codePath"></a>
+
+```typescript
+public readonly codePath: string;
+```
+
+- *Type:* string
+
+---
+
+##### `environment`<sup>Optional</sup> <a name="environment" id="@devkit-io/constructs.S3EventLambdaProps.property.environment"></a>
+
+```typescript
+public readonly environment: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `eventTypeNotifications`<sup>Optional</sup> <a name="eventTypeNotifications" id="@devkit-io/constructs.S3EventLambdaProps.property.eventTypeNotifications"></a>
+
+```typescript
+public readonly eventTypeNotifications: EventType[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.EventType[]
+
+---
+
+##### `handler`<sup>Optional</sup> <a name="handler" id="@devkit-io/constructs.S3EventLambdaProps.property.handler"></a>
+
+```typescript
+public readonly handler: string;
+```
+
+- *Type:* string
+
+---
+
+##### `lambdaFunction`<sup>Optional</sup> <a name="lambdaFunction" id="@devkit-io/constructs.S3EventLambdaProps.property.lambdaFunction"></a>
+
+```typescript
+public readonly lambdaFunction: Function;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Function
+
+---
+
+##### `memorySize`<sup>Optional</sup> <a name="memorySize" id="@devkit-io/constructs.S3EventLambdaProps.property.memorySize"></a>
+
+```typescript
+public readonly memorySize: number;
+```
+
+- *Type:* number
+
+---
+
+##### `runtime`<sup>Optional</sup> <a name="runtime" id="@devkit-io/constructs.S3EventLambdaProps.property.runtime"></a>
+
+```typescript
+public readonly runtime: Runtime;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Runtime
 
 ---
 
