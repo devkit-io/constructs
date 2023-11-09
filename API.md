@@ -575,6 +575,127 @@ The tree node.
 ---
 
 
+### QueueWithDLQ <a name="QueueWithDLQ" id="@devkit-io/constructs.QueueWithDLQ"></a>
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.QueueWithDLQ.Initializer"></a>
+
+```typescript
+import { QueueWithDLQ } from '@devkit-io/constructs'
+
+new QueueWithDLQ(scope: Construct, id: string, props: QueueWithDLQProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.QueueWithDLQProps">QueueWithDLQProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.QueueWithDLQ.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.QueueWithDLQ.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.QueueWithDLQ.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.QueueWithDLQProps">QueueWithDLQProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.QueueWithDLQ.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.QueueWithDLQ.isConstruct"></a>
+
+```typescript
+import { QueueWithDLQ } from '@devkit-io/constructs'
+
+QueueWithDLQ.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.QueueWithDLQ.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.Queue</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQ.property.queue">queue</a></code> | <code>aws-cdk-lib.aws_sqs.Queue</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.QueueWithDLQ.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `deadLetterQueue`<sup>Required</sup> <a name="deadLetterQueue" id="@devkit-io/constructs.QueueWithDLQ.property.deadLetterQueue"></a>
+
+```typescript
+public readonly deadLetterQueue: Queue;
+```
+
+- *Type:* aws-cdk-lib.aws_sqs.Queue
+
+---
+
+##### `queue`<sup>Required</sup> <a name="queue" id="@devkit-io/constructs.QueueWithDLQ.property.queue"></a>
+
+```typescript
+public readonly queue: Queue;
+```
+
+- *Type:* aws-cdk-lib.aws_sqs.Queue
+
+---
+
+
 ### S3CloudfrontAssetDistribution <a name="S3CloudfrontAssetDistribution" id="@devkit-io/constructs.S3CloudfrontAssetDistribution"></a>
 
 #### Initializers <a name="Initializers" id="@devkit-io/constructs.S3CloudfrontAssetDistribution.Initializer"></a>
@@ -1078,6 +1199,142 @@ The tree node.
 ---
 
 
+### TaskHandlingConstruct <a name="TaskHandlingConstruct" id="@devkit-io/constructs.TaskHandlingConstruct"></a>
+
+This construct sets up a task processing architecture using DynamoDB, SQS, and Lambda.
+
+It ensures that the resources are interconnected and permissions are appropriately set.
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.TaskHandlingConstruct.Initializer"></a>
+
+```typescript
+import { TaskHandlingConstruct } from '@devkit-io/constructs'
+
+new TaskHandlingConstruct(scope: Construct, id: string, props?: TaskHandlingProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.TaskHandlingProps">TaskHandlingProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.TaskHandlingConstruct.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.TaskHandlingConstruct.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Optional</sup> <a name="props" id="@devkit-io/constructs.TaskHandlingConstruct.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.TaskHandlingProps">TaskHandlingProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.TaskHandlingConstruct.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.TaskHandlingConstruct.isConstruct"></a>
+
+```typescript
+import { TaskHandlingConstruct } from '@devkit-io/constructs'
+
+TaskHandlingConstruct.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.TaskHandlingConstruct.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.property.queue">queue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.property.table">table</a></code> | <code>aws-cdk-lib.aws_dynamodb.ITable</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingConstruct.property.taskHandler">taskHandler</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.TaskHandlingConstruct.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `queue`<sup>Required</sup> <a name="queue" id="@devkit-io/constructs.TaskHandlingConstruct.property.queue"></a>
+
+```typescript
+public readonly queue: IQueue;
+```
+
+- *Type:* aws-cdk-lib.aws_sqs.IQueue
+
+---
+
+##### `table`<sup>Required</sup> <a name="table" id="@devkit-io/constructs.TaskHandlingConstruct.property.table"></a>
+
+```typescript
+public readonly table: ITable;
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.ITable
+
+---
+
+##### `taskHandler`<sup>Required</sup> <a name="taskHandler" id="@devkit-io/constructs.TaskHandlingConstruct.property.taskHandler"></a>
+
+```typescript
+public readonly taskHandler: IFunction;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.IFunction
+
+---
+
+
 ## Structs <a name="Structs" id="Structs"></a>
 
 ### CircuitBreakerContainerServiceProps <a name="CircuitBreakerContainerServiceProps" id="@devkit-io/constructs.CircuitBreakerContainerServiceProps"></a>
@@ -1441,6 +1698,135 @@ public readonly volumeSize: number;
 
 ```typescript
 public readonly volumeType: string;
+```
+
+- *Type:* string
+
+---
+
+### EncryptedDynamodbTableProps <a name="EncryptedDynamodbTableProps" id="@devkit-io/constructs.EncryptedDynamodbTableProps"></a>
+
+Properties for creating an encrypted DynamoDB table with a KMS key.
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.EncryptedDynamodbTableProps.Initializer"></a>
+
+```typescript
+import { EncryptedDynamodbTableProps } from '@devkit-io/constructs'
+
+const encryptedDynamodbTableProps: EncryptedDynamodbTableProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.partitionKey">partitionKey</a></code> | <code>aws-cdk-lib.aws_dynamodb.Attribute</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.tableName">tableName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.billingMode">billingMode</a></code> | <code>aws-cdk-lib.aws_dynamodb.BillingMode</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.existingKmsKey">existingKmsKey</a></code> | <code>aws-cdk-lib.aws_kms.Key</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.gsiIndices">gsiIndices</a></code> | <code>aws-cdk-lib.aws_dynamodb.GlobalSecondaryIndexProps[]</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.kmsKeyDescription">kmsKeyDescription</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.pointInTimeRecovery">pointInTimeRecovery</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.removalPolicy">removalPolicy</a></code> | <code>aws-cdk-lib.RemovalPolicy</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.sortKey">sortKey</a></code> | <code>aws-cdk-lib.aws_dynamodb.Attribute</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps.property.ttlAttributeName">ttlAttributeName</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `partitionKey`<sup>Required</sup> <a name="partitionKey" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.partitionKey"></a>
+
+```typescript
+public readonly partitionKey: Attribute;
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.Attribute
+
+---
+
+##### `tableName`<sup>Required</sup> <a name="tableName" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.tableName"></a>
+
+```typescript
+public readonly tableName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `billingMode`<sup>Optional</sup> <a name="billingMode" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.billingMode"></a>
+
+```typescript
+public readonly billingMode: BillingMode;
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.BillingMode
+
+---
+
+##### `existingKmsKey`<sup>Optional</sup> <a name="existingKmsKey" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.existingKmsKey"></a>
+
+```typescript
+public readonly existingKmsKey: Key;
+```
+
+- *Type:* aws-cdk-lib.aws_kms.Key
+
+---
+
+##### `gsiIndices`<sup>Optional</sup> <a name="gsiIndices" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.gsiIndices"></a>
+
+```typescript
+public readonly gsiIndices: GlobalSecondaryIndexProps[];
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.GlobalSecondaryIndexProps[]
+
+---
+
+##### `kmsKeyDescription`<sup>Optional</sup> <a name="kmsKeyDescription" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.kmsKeyDescription"></a>
+
+```typescript
+public readonly kmsKeyDescription: string;
+```
+
+- *Type:* string
+
+---
+
+##### `pointInTimeRecovery`<sup>Optional</sup> <a name="pointInTimeRecovery" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.pointInTimeRecovery"></a>
+
+```typescript
+public readonly pointInTimeRecovery: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `removalPolicy`<sup>Optional</sup> <a name="removalPolicy" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.removalPolicy"></a>
+
+```typescript
+public readonly removalPolicy: RemovalPolicy;
+```
+
+- *Type:* aws-cdk-lib.RemovalPolicy
+
+---
+
+##### `sortKey`<sup>Optional</sup> <a name="sortKey" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.sortKey"></a>
+
+```typescript
+public readonly sortKey: Attribute;
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.Attribute
+
+---
+
+##### `ttlAttributeName`<sup>Optional</sup> <a name="ttlAttributeName" id="@devkit-io/constructs.EncryptedDynamodbTableProps.property.ttlAttributeName"></a>
+
+```typescript
+public readonly ttlAttributeName: string;
 ```
 
 - *Type:* string
@@ -1825,6 +2211,56 @@ public readonly pagingEnabled: boolean;
 ```
 
 - *Type:* boolean
+
+---
+
+### QueueWithDLQProps <a name="QueueWithDLQProps" id="@devkit-io/constructs.QueueWithDLQProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.QueueWithDLQProps.Initializer"></a>
+
+```typescript
+import { QueueWithDLQProps } from '@devkit-io/constructs'
+
+const queueWithDLQProps: QueueWithDLQProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQProps.property.visibilityTimeout">visibilityTimeout</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQProps.property.dlqRetentionPeriod">dlqRetentionPeriod</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.QueueWithDLQProps.property.maxReceiveCount">maxReceiveCount</a></code> | <code>number</code> | *No description.* |
+
+---
+
+##### `visibilityTimeout`<sup>Required</sup> <a name="visibilityTimeout" id="@devkit-io/constructs.QueueWithDLQProps.property.visibilityTimeout"></a>
+
+```typescript
+public readonly visibilityTimeout: Duration;
+```
+
+- *Type:* aws-cdk-lib.Duration
+
+---
+
+##### `dlqRetentionPeriod`<sup>Optional</sup> <a name="dlqRetentionPeriod" id="@devkit-io/constructs.QueueWithDLQProps.property.dlqRetentionPeriod"></a>
+
+```typescript
+public readonly dlqRetentionPeriod: Duration;
+```
+
+- *Type:* aws-cdk-lib.Duration
+
+---
+
+##### `maxReceiveCount`<sup>Optional</sup> <a name="maxReceiveCount" id="@devkit-io/constructs.QueueWithDLQProps.property.maxReceiveCount"></a>
+
+```typescript
+public readonly maxReceiveCount: number;
+```
+
+- *Type:* number
 
 ---
 
@@ -2433,6 +2869,89 @@ public readonly domainNames: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+### TaskHandlingProps <a name="TaskHandlingProps" id="@devkit-io/constructs.TaskHandlingProps"></a>
+
+#### Initializer <a name="Initializer" id="@devkit-io/constructs.TaskHandlingProps.Initializer"></a>
+
+```typescript
+import { TaskHandlingProps } from '@devkit-io/constructs'
+
+const taskHandlingProps: TaskHandlingProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.TaskHandlingProps.property.lambdaProps">lambdaProps</a></code> | <code><a href="#@devkit-io/constructs.MonitoredNodeLambdaProps">MonitoredNodeLambdaProps</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingProps.property.queue">queue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingProps.property.queueProps">queueProps</a></code> | <code><a href="#@devkit-io/constructs.QueueWithDLQProps">QueueWithDLQProps</a></code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingProps.property.table">table</a></code> | <code>aws-cdk-lib.aws_dynamodb.ITable</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingProps.property.tableRemovalPolicy">tableRemovalPolicy</a></code> | <code>aws-cdk-lib.RemovalPolicy</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.TaskHandlingProps.property.taskHandler">taskHandler</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | *No description.* |
+
+---
+
+##### `lambdaProps`<sup>Optional</sup> <a name="lambdaProps" id="@devkit-io/constructs.TaskHandlingProps.property.lambdaProps"></a>
+
+```typescript
+public readonly lambdaProps: MonitoredNodeLambdaProps;
+```
+
+- *Type:* <a href="#@devkit-io/constructs.MonitoredNodeLambdaProps">MonitoredNodeLambdaProps</a>
+
+---
+
+##### `queue`<sup>Optional</sup> <a name="queue" id="@devkit-io/constructs.TaskHandlingProps.property.queue"></a>
+
+```typescript
+public readonly queue: IQueue;
+```
+
+- *Type:* aws-cdk-lib.aws_sqs.IQueue
+
+---
+
+##### `queueProps`<sup>Optional</sup> <a name="queueProps" id="@devkit-io/constructs.TaskHandlingProps.property.queueProps"></a>
+
+```typescript
+public readonly queueProps: QueueWithDLQProps;
+```
+
+- *Type:* <a href="#@devkit-io/constructs.QueueWithDLQProps">QueueWithDLQProps</a>
+
+---
+
+##### `table`<sup>Optional</sup> <a name="table" id="@devkit-io/constructs.TaskHandlingProps.property.table"></a>
+
+```typescript
+public readonly table: ITable;
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.ITable
+
+---
+
+##### `tableRemovalPolicy`<sup>Optional</sup> <a name="tableRemovalPolicy" id="@devkit-io/constructs.TaskHandlingProps.property.tableRemovalPolicy"></a>
+
+```typescript
+public readonly tableRemovalPolicy: RemovalPolicy;
+```
+
+- *Type:* aws-cdk-lib.RemovalPolicy
+
+---
+
+##### `taskHandler`<sup>Optional</sup> <a name="taskHandler" id="@devkit-io/constructs.TaskHandlingProps.property.taskHandler"></a>
+
+```typescript
+public readonly taskHandler: IFunction;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.IFunction
 
 ---
 
