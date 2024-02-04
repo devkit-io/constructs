@@ -5,7 +5,7 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as lambdaEventSources from 'aws-cdk-lib/aws-lambda-event-sources';
 import * as sqs from 'aws-cdk-lib/aws-sqs';
 import { Construct } from 'constructs';
-import EncryptedDynamodbTable from './encrypted-dynamodb-table';
+import { EncryptedDynamodbTable } from './encrypted-dynamodb-table';
 import { MonitoredNodeLambda, MonitoredNodeLambdaProps } from './monitored-node-lambda';
 import { QueueWithDLQ, QueueWithDLQProps } from './queue-with-dlq';
 
