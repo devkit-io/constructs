@@ -22,7 +22,7 @@ export interface EncryptedDynamodbTableProps {
 /**
  * A construct for creating an encrypted DynamoDB table with a customer-managed KMS key.
  */
-export default class EncryptedDynamodbTable extends Construct {
+export class EncryptedDynamodbTable extends Construct {
   readonly table: Table;
   readonly kmsKey: Key;
 
