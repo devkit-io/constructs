@@ -342,6 +342,129 @@ public readonly cluster: Cluster;
 ---
 
 
+### EncryptedDynamodbTable <a name="EncryptedDynamodbTable" id="@devkit-io/constructs.EncryptedDynamodbTable"></a>
+
+A construct for creating an encrypted DynamoDB table with a customer-managed KMS key.
+
+#### Initializers <a name="Initializers" id="@devkit-io/constructs.EncryptedDynamodbTable.Initializer"></a>
+
+```typescript
+import { EncryptedDynamodbTable } from '@devkit-io/constructs'
+
+new EncryptedDynamodbTable(scope: Construct, id: string, props: EncryptedDynamodbTableProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.Initializer.parameter.props">props</a></code> | <code><a href="#@devkit-io/constructs.EncryptedDynamodbTableProps">EncryptedDynamodbTableProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@devkit-io/constructs.EncryptedDynamodbTable.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@devkit-io/constructs.EncryptedDynamodbTable.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@devkit-io/constructs.EncryptedDynamodbTable.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@devkit-io/constructs.EncryptedDynamodbTableProps">EncryptedDynamodbTableProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@devkit-io/constructs.EncryptedDynamodbTable.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@devkit-io/constructs.EncryptedDynamodbTable.isConstruct"></a>
+
+```typescript
+import { EncryptedDynamodbTable } from '@devkit-io/constructs'
+
+EncryptedDynamodbTable.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@devkit-io/constructs.EncryptedDynamodbTable.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.property.kmsKey">kmsKey</a></code> | <code>aws-cdk-lib.aws_kms.Key</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.EncryptedDynamodbTable.property.table">table</a></code> | <code>aws-cdk-lib.aws_dynamodb.Table</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@devkit-io/constructs.EncryptedDynamodbTable.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `kmsKey`<sup>Required</sup> <a name="kmsKey" id="@devkit-io/constructs.EncryptedDynamodbTable.property.kmsKey"></a>
+
+```typescript
+public readonly kmsKey: Key;
+```
+
+- *Type:* aws-cdk-lib.aws_kms.Key
+
+---
+
+##### `table`<sup>Required</sup> <a name="table" id="@devkit-io/constructs.EncryptedDynamodbTable.property.table"></a>
+
+```typescript
+public readonly table: Table;
+```
+
+- *Type:* aws-cdk-lib.aws_dynamodb.Table
+
+---
+
+
 ### MonitoredNodeLambda <a name="MonitoredNodeLambda" id="@devkit-io/constructs.MonitoredNodeLambda"></a>
 
 A construct to create a monitored Node.js Lambda function with deployment capabilities.
