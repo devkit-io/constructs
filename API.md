@@ -2642,6 +2642,7 @@ const selfMutatingPipelineProps: SelfMutatingPipelineProps = { ... }
 | <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.customRole">customRole</a></code> | <code>aws-cdk-lib.aws_iam.Role</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.environmentVariables">environmentVariables</a></code> | <code><a href="#@devkit-io/constructs.EnvironmentVariable">EnvironmentVariable</a>[]</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.notificationsTopic">notificationsTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | *No description.* |
+| <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.synthOutputDirectory">synthOutputDirectory</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@devkit-io/constructs.SelfMutatingPipelineProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | *No description.* |
 
 ---
@@ -2783,6 +2784,16 @@ public readonly notificationsTopic: ITopic;
 ```
 
 - *Type:* aws-cdk-lib.aws_sns.ITopic
+
+---
+
+##### `synthOutputDirectory`<sup>Optional</sup> <a name="synthOutputDirectory" id="@devkit-io/constructs.SelfMutatingPipelineProps.property.synthOutputDirectory"></a>
+
+```typescript
+public readonly synthOutputDirectory: string;
+```
+
+- *Type:* string
 
 ---
 

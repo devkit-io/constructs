@@ -29,6 +29,7 @@ export interface SelfMutatingPipelineProps {
   readonly buildTimeout?: Duration;
   readonly additionalPolicies?: PolicyStatement[];
   readonly cacheBucket?: Bucket;
+  readonly synthOutputDirectory?: string;
   readonly vpc?: IVpc;
 }
 
@@ -63,7 +64,7 @@ export class SelfMutatingPipeline extends Construct {
     const synth = new CodeBuildStep(`${id}-Synth`, {
       input: source,
       commands: props.buildCommands,
-      primaryOutputDirectory: 'deployment/cdk.out',
+      primaryOutputDirectory: props.synthOutputDirectory ?? 'deployment/cdk.out',
       ...codeBuildDefaults, // spread in the codeBuild properties
     });
 
